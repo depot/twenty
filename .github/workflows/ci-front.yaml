@@ -85,7 +85,7 @@ jobs:
       - name: Run storybook tests
         run: npx nx storybook:serve-and-test:static twenty-front --configuration=${{ matrix.storybook_scope }}
   front-sb-test-performance:
-    runs-on: ubuntu-22.04
+    runs-on: depot-ubuntu-latest-8
     name: sb-test-perf-depot
     # timeout-minutes: 60
     env:
