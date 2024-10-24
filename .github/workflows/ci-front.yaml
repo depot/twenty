@@ -60,6 +60,7 @@ jobs:
         run: npx nx storybook:build twenty-front
   front-sb-test:
     runs-on: depot-ubuntu-latest-8
+    name: sb-test-depot
     timeout-minutes: 60
     needs: front-sb-build
     strategy:
@@ -103,6 +104,7 @@ jobs:
         run: npx nx storybook:serve-and-test:static twenty-front --configuration=${{ matrix.storybook_scope }}
   front-sb-test-performance:
     runs-on: depot-ubuntu-latest-8
+    name: sb-test-perf-depot
     timeout-minutes: 60
     env:
       REACT_APP_SERVER_BASE_URL: http://localhost:3000
