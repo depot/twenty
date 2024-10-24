@@ -89,9 +89,9 @@ jobs:
       - name: Run storybook tests
         run: npx nx storybook:serve-and-test:static twenty-front --configuration=${{ matrix.storybook_scope }}
   front-sb-test-performance:
-    runs-on: depot-ubuntu-latest-8
+    runs-on: ubuntu-22.04
     name: sb-test-perf-depot
-    timeout-minutes: 60
+    # timeout-minutes: 60
     env:
       REACT_APP_SERVER_BASE_URL: http://localhost:3000
       NX_REJECT_UNKNOWN_LOCAL_CACHE: 0
@@ -107,6 +107,9 @@ jobs:
         run: cd packages/twenty-front && npx playwright install
       - name: Front / Write .env
         run: npx nx reset:env twenty-front
+      - uses: mxschmitt/action-tmate@v3
+        with:
+          limit-access-to-actor: false
       - name: Run storybook tests
         run: npx nx run twenty-front:storybook:serve-and-test:static:performance
   front-chromatic-deployment:
