@@ -32,4 +32,3 @@ jobs:
           limit-access-to-actor: false
       - name: Run storybook tests
         run: npx nx run twenty-front:storybook:serve-and-test:static:performance
-        
