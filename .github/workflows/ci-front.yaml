@@ -13,7 +13,7 @@ concurrency:
 
 jobs:
   front-sb-build:
-    runs-on: ubuntu-latest
+    runs-on: depot-ubuntu-latest
     env:
       REACT_APP_SERVER_BASE_URL: http://localhost:3000
       NX_REJECT_UNKNOWN_LOCAL_CACHE: 0
@@ -101,9 +101,8 @@ jobs:
       - name: Run storybook tests
         run: npx nx run twenty-front:storybook:serve-and-test:static:performance
   front-chromatic-deployment:
-    if: contains(github.event.pull_request.labels.*.name, 'run-chromatic') || github.event_name == 'push'
     needs: front-sb-build
-    runs-on: ubuntu-latest
+    runs-on: depot-ubuntu-latest
     env:
       REACT_APP_SERVER_BASE_URL: http://127.0.0.1:3000
       CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
@@ -135,7 +134,7 @@ jobs:
       - name: Publish to Chromatic
         run: npx nx run twenty-front:chromatic:ci
   front-task:
-    runs-on: ubuntu-latest
+    runs-on: depot-ubuntu-latest
     env:
       NX_REJECT_UNKNOWN_LOCAL_CACHE: 0
     strategy:
