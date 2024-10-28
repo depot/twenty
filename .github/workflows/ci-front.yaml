@@ -36,27 +36,18 @@ jobs:
             packages/twenty-front/**
             packages/twenty-ui/**
 
-      - name: Skip if no relevant changes
-        if: steps.changed-files.outputs.any_changed == 'false'
-        run: echo "No relevant changes. Skipping CI."
-
       - name: Install dependencies
-        if: steps.changed-files.outputs.any_changed == 'true'
         uses: ./.github/workflows/actions/yarn-install
       - name: Diagnostic disk space issue
-        if: steps.changed-files.outputs.any_changed == 'true'
         run: df -h
       - name: Front / Restore Storybook Task Cache
-        if: steps.changed-files.outputs.any_changed == 'true'
         uses: ./.github/workflows/actions/task-cache
         with:
           tag: scope:frontend
           tasks: storybook:build
       - name: Front / Write .env
-        if: steps.changed-files.outputs.any_changed == 'true'
         run: npx nx reset:env twenty-front
       - name: Front / Build storybook
-        if: steps.changed-files.outputs.any_changed == 'true'
         run: npx nx storybook:build twenty-front
   front-sb-test:
     runs-on: depot-ubuntu-latest-8
@@ -129,27 +120,19 @@ jobs:
           files: |
             packages/twenty-front/**
 
-      - name: Skip if no relevant changes
-        if: steps.changed-files.outputs.any_changed == 'false'
-        run: echo "No relevant changes. Skipping CI."
-
       - name: Install dependencies
-        if: steps.changed-files.outputs.any_changed == 'true'
         uses: ./.github/workflows/actions/yarn-install
       - name: Front / Restore Storybook Task Cache
-        if: steps.changed-files.outputs.any_changed == 'true'
         uses: ./.github/workflows/actions/task-cache
         with:
           tag: scope:frontend
           tasks: storybook:build
       - name: Front / Write .env
-        if: steps.changed-files.outputs.any_changed == 'true'
         run: |
           cd packages/twenty-front
           touch .env
           echo "REACT_APP_SERVER_BASE_URL: $REACT_APP_SERVER_BASE_URL" >> .env
       - name: Publish to Chromatic
-        if: steps.changed-files.outputs.any_changed == 'true'
         run: npx nx run twenty-front:chromatic:ci
   front-task:
     runs-on: ubuntu-latest
@@ -174,27 +157,19 @@ jobs:
           files: |
             packages/twenty-front/**
 
-      - name: Skip if no relevant changes
-        if: steps.changed-files.outputs.any_changed == 'false'
-        run: echo "No relevant changes. Skipping CI."
-
       - name: Install dependencies
-        if: steps.changed-files.outputs.any_changed == 'true'
         uses: ./.github/workflows/actions/yarn-install
       - name: Front / Restore ${{ matrix.task }} task cache
-        if: steps.changed-files.outputs.any_changed == 'true'
         uses: ./.github/workflows/actions/task-cache
         with:
           tag: scope:frontend
           tasks: ${{ matrix.task }}
       - name: Reset .env
-        if: steps.changed-files.outputs.any_changed == 'true'
         uses: ./.github/workflows/actions/nx-affected
         with:
           tag: scope:frontend
           tasks: reset:env
       - name: Run ${{ matrix.task }} task
-        if: steps.changed-files.outputs.any_changed == 'true'
         uses: ./.github/workflows/actions/nx-affected
         with:
           tag: scope:frontend
