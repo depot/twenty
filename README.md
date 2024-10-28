@@ -37,11 +37,11 @@ bump2
 
 We’ve spent thousands of hours grappling with traditional CRMs like Pipedrive and Salesforce to align them with our business needs, only to end up frustrated — customizations are complex and the closed ecosystems of these platforms can feel restrictive.
 
-We felt the need for a CRM platform that empowers rather than constrains. We believe the next great CRM will come from the open-source community. We’ve packed Twenty with powerful features to give you full control and help you run your business efficiently. 
+We felt the need for a CRM platform that empowers rather than constrains. We believe the next great CRM will come from the open-source community. We’ve packed Twenty with powerful features to give you full control and help you run your business efficiently.
 
 <br>
 
-# Demo 
+# Demo
 Go to <a href="https://demo.twenty.com/">demo.twenty.com</a> and login with the following credentials:
 
 ```
@@ -49,9 +49,9 @@ email: tim@apple.dev
 password: Applecar2025
 ```
 
-See also:  
-🚀 [Self-hosting](https://twenty.com/developers/section/self-hosting)  
-🖥️ [Local Setup](https://twenty.com/developers/local-setup)  
+See also:
+🚀 [Self-hosting](https://twenty.com/developers/section/self-hosting)
+🖥️ [Local Setup](https://twenty.com/developers/local-setup)
 
 # Why Choose Twenty?
 We understand that the CRM landscape is vast. So why should you choose us?
@@ -67,17 +67,25 @@ We understand that the CRM landscape is vast. So why should you choose us?
 <br>
 
 # What You Can Do With Twenty
-We're currently in the development phase of Twenty's alpha version.  
+We're currently in the development phase of Twenty's alpha version.
 
-Please feel free to flag any specific need you have need by creating an issue.   
+Please feel free to flag any specific need you have need by creating an issue.
 
 Below are some features we have implemented to date:
 
-+ [Add, filter, sort, edit, and track customers](#add-filter-sort-edit-and-track-customers)
-+ [Create one or several opportunities for each company](#create-one-or-several-opportunities-for-each-company)
-+ [See rich notes tasks displayed in a timeline](#see-rich-notes-tasks-displayed-in-a-timeline)
-+ [Create tasks on records](#create-tasks-on-records)
-+ [Navigate quickly through the app using keyboard shortcuts and search](#navigate-quickly-through-the-app-using-keyboard-shortcuts-and-search)
+- [Demo](#demo)
+- [Why Choose Twenty?](#why-choose-twenty)
+- [What You Can Do With Twenty](#what-you-can-do-with-twenty)
+  - [Add, filter, sort, edit, and track customers:](#add-filter-sort-edit-and-track-customers)
+  - [Create one or several opportunities for each company:](#create-one-or-several-opportunities-for-each-company)
+  - [Track deals effortlessly with the email integration:](#track-deals-effortlessly-with-the-email-integration)
+  - [Tailor your data model to meet business needs:](#tailor-your-data-model-to-meet-business-needs)
+  - [See rich notes displayed in a timeline:](#see-rich-notes-displayed-in-a-timeline)
+  - [Create tasks on records](#create-tasks-on-records)
+  - [Navigate quickly through the app using keyboard shortcuts and search:](#navigate-quickly-through-the-app-using-keyboard-shortcuts-and-search)
+  - [Connect your CRM to all your tools through our APIs and Webhooks.](#connect-your-crm-to-all-your-tools-through-our-apis-and-webhooks)
+- [What's In Store](#whats-in-store)
+- [Join the Community](#join-the-community)
 
 
 ## Add, filter, sort, edit, and track customers:
@@ -175,9 +183,7 @@ Here’s what you can look forward to:
 # Join the Community
 
 - Star the repo
-- Join [discussions](https://github.com/twentyhq/twenty/discussions) and track [issues](https://github.com/twentyhq/twenty/issues) 
-- Follow us on [Twitter](https://twitter.com/twentycrm) or [LinkedIn](https://www.linkedin.com/company/twenty/) 
+- Join [discussions](https://github.com/twentyhq/twenty/discussions) and track [issues](https://github.com/twentyhq/twenty/issues)
+- Follow us on [Twitter](https://twitter.com/twentycrm) or [LinkedIn](https://www.linkedin.com/company/twenty/)
 - Join our [Discord](https://discord.gg/cx5n4Jzs57)
-- [Contributions](https://github.com/twentyhq/twenty/contribute) are, of course, most welcome! 
-
-
+- [Contributions](https://github.com/twentyhq/twenty/contribute) are, of course, most welcome!
